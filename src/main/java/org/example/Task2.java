@@ -10,13 +10,10 @@ import java.util.function.Predicate;
 // Используйте функцию count() из Stream API
 public class Task2 {
 
-    static boolean isTwoStringUpperCase(List<String> list){
+    static boolean isTwoStringUpperCase(List<String> list) {
 
         Predicate<String> tester = str -> Character.isUpperCase(str.charAt(0));
         long countStr = list.stream().filter(tester).count();
         return countStr > 2;
     }
-
-
-
 }

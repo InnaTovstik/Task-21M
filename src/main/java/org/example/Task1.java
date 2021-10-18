@@ -8,14 +8,13 @@ import java.util.stream.Collectors;
 // Output: [4, 16]
 public class Task1 {
 
-   static String filterNumber(int[] numbers){
+    static String filterNumber(int[] numbers) {
 
-       return Arrays
-               .stream(numbers)
-               .filter(x -> x%2==0)
-               .map(x -> x*x)
-               .mapToObj(String::valueOf)
-               .collect(Collectors.joining(", "));
-   }
-
+        return Arrays
+                .stream(numbers)
+                .filter(x -> x % 2 == 0)
+                .map(x -> x * x)
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining(", "));
+    }
 }

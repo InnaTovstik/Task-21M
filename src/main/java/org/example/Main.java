@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Input: [" + Arrays
                 .stream(numbers)
                 .mapToObj(String::valueOf)
-                .collect(Collectors.joining(", "))+ "]");
+                .collect(Collectors.joining(", ")) + "]");
         System.out.println("Output: [" + Task1.filterNumber(numbers) + "]");
 
         System.out.println("Task2.");
@@ -22,7 +22,7 @@ public class Main {
         list.add("catley");
         list.add("Sie");
         System.out.println("Cодержится ли в коллекции больше 2 строк, которые начинаются с заглавной буквы " +
-                list +" - " + Task2.isTwoStringUpperCase(list));
+                list + " - " + Task2.isTwoStringUpperCase(list));
 
         System.out.println("Task3.");
         Map<Integer, Boolean> myMap = new HashMap<>();
