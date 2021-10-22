@@ -30,5 +30,6 @@ public class Main {
         myMap.put(21, true);
         System.out.println(Task3.findListKey(myMap));
 
+        Task4.triFunctionExample();
     }
 }
