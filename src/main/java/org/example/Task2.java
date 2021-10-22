@@ -12,8 +12,20 @@ public class Task2 {
 
     static boolean isTwoStringUpperCase(List<String> list) {
 
-        Predicate<String> tester = str -> Character.isUpperCase(str.charAt(0));
-        long countStr = list.stream().filter(tester).count();
-        return countStr > 2;
+        Predicate <List<String>> tester = Task2::filterList;
+        long count = list.stream()
+                .map(s -> list)
+                .filter(tester)
+                .count();
+           return count > 2;
+    }
+
+    private static boolean filterList(List<String> list) {
+        int count = 0;
+        for (String lst : list)
+            if (Character.isUpperCase(lst.charAt(0))) {
+                count++;
+            }
+        return count > 2;
     }
 }
