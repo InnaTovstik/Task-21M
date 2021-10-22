@@ -13,7 +13,7 @@ public class Task3 {
     static List<Integer> findListKey(Map<Integer, Boolean> myMap) {
 
         return myMap.entrySet().stream()
-                .filter(entry -> entry.getValue() == true)
+                .filter(Map.Entry::getValue)
                 .map(Map.Entry::getKey)
                 .sorted(Comparator.reverseOrder())
                 .collect(Collectors.toList());
